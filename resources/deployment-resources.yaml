@@ -1,0 +1,82 @@
+apiVersion: v1
+kind: DeploymentConfig
+metadata:
+  name: patient-api
+  labels:
+    app: patient-api
+    component: backend
+spec:
+  replicas: 1
+  selector:
+    deploymentconfig: patient-api
+  template:
+    metadata:
+      labels:
+        app: patient-api
+        component: backend
+        deploymentconfig: patient-api
+    spec:
+      containers:
+      - name: patient-api
+        image: patient-api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9080
+        env:
+        - name: ENV_MYSQL_URL
+          valueFrom:
+            secretKeyRef:
+              name: mysql-jdbc
+              key: jdbc-url
+        - name: ENV_MYSQL_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql
+              key: database-user
+        - name: ENV_MYSQL_PWD
+          valueFrom:
+            secretKeyRef:
+              name: mysql
+              key: database-password
+      restartPolicy: Always
+  triggers:
+  - type: ConfigChange
+  - type: ImageChange
+    imageChangeParams:
+      automatic: true
+      containerNames:
+      - patient-api
+      from:
+        kind: ImageStreamTag
+        name: patient-api:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: patient-api
+  labels:
+    app: patient-api
+    component: backend
+spec:
+  ports:
+  - name: 9080-tcp
+    port: 9080
+    protocol: TCP
+    targetPort: 9080
+  selector:
+    deploymentconfig: patient-api
+---
+apiVersion: v1
+kind: Route
+metadata:
+  name: patient-api
+  labels:
+    app: patient-api
+    component: backend
+spec:
+  port:
+    targetPort: 9080-tcp
+  to:
+    kind: Service
+    name: patient-api
+    weight: 100

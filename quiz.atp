@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<POLL TYPE="anonymous" SHOWTIMER="yes" ALARM="15:0" NOANSWER="yes" SHOWRESPONSE="yes">
+
+<QUESTION TYPE="mcmany" TITLE="How can you build container images in OpenShift?">
+<ANSWER ISCORRECT="true">Docker</ANSWER>
+<ANSWER ISCORRECT="true">Custom build process</ANSWER>
+<ANSWER ISCORRECT="true">Source-to-Image</ANSWER>
+<ANSWER ISCORRECT="false">Compiling binaries</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcmany" TITLE="Which statements about containers are correct?">
+<ANSWER ISCORRECT="true">An image is needed to run a container, and typically builds on other images</ANSWER>
+<ANSWER ISCORRECT="false">Containers provide easy access to system level resources such as memory usage, input devices or network I/O</ANSWER>
+<ANSWER ISCORRECT="true">Containers share the same Host OS</ANSWER>
+<ANSWER ISCORRECT="false">Updating a library in one container will also change the library in another container</ANSWER>
+<ANSWER ISCORRECT="true">From one image you can run many containers</ANSWER>
+<ANSWER ISCORRECT="true">Developers use the same container image in development, testing and production</ANSWER>
+<ANSWER ISCORRECT="false">Restarting a container requires to stop services on the Host OS, sometimes even rebooting it</ANSWER>
+<ANSWER ISCORRECT="true">Container images are stored in an image registry such as Quay or Docker Hub</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcmany" TITLE="Which applications are easy to containerize?">
+<ANSWER ISCORRECT="true">A PHP content management system</ANSWER>
+<ANSWER ISCORRECT="false">A python application which captures photos from a camera</ANSWER>
+<ANSWER ISCORRECT="true">A Java backend that connects to a Kafka event stream</ANSWER>
+<ANSWER ISCORRECT="false">A network I/O analysis tool</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcmany" TITLE="Which statements about Kubernetes and OpenShift are correct?">
+<ANSWER ISCORRECT="false">Only one container can run in a Pod</ANSWER>
+<ANSWER ISCORRECT="true">Kubernetes helps to orchestrate a large number of containers</ANSWER>
+<ANSWER ISCORRECT="false">The developer experience of Kubernetes and OpenShift is the same</ANSWER>
+<ANSWER ISCORRECT="true">Services define a logical set of Pods to enable external traffic, load balancing and service discovery</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcone" TITLE="You have to deploy a Node.js application your team is developing to OpenShift. Which approach do you choose?">
+<ANSWER ISCORRECT="false">Write a custom Dockerfile with a Node.js base image from DockerHub</ANSWER>
+<ANSWER ISCORRECT="true">Use the Node.js S2I builder image from OpenShift's Catalog</ANSWER>
+<ANSWER ISCORRECT="false">Write a custom Dockerfile with a Node.js base image from Red Hat Container Catalog</ANSWER>
+<ANSWER ISCORRECT="false">Create a custom Node.js builder image as OpenShift does not support Node.js out-of-the-box</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcmany" TITLE="Which statements about typical S2I builds on OpenShift are correct?">
+<ANSWER ISCORRECT="true">The S2I tool injects source code into a base image to create ready-to-run container images without Docker</ANSWER>
+<ANSWER ISCORRECT="false">New builds are usually not triggered when the builder image changes, e.g. due to security fixes</ANSWER>
+<ANSWER ISCORRECT="true">In the build step the application is compiled and packaged as a container image and pushed into the OpenShift registry</ANSWER>
+<ANSWER ISCORRECT="true">In the deployment step the application is made available by starting Pods in which the containers run</ANSWER>
+</QUESTION>
+
+<QUESTION TYPE="mcmany" TITLE="What are typical scenarios for creating a container image with a Dockerfile instead of S2I?">
+<ANSWER ISCORRECT="true">Installing new libraries, e.g. with apt-get install</ANSWER>
+<ANSWER ISCORRECT="false">To share a standardized build process among multiple applications</ANSWER>
+<ANSWER ISCORRECT="true">No suitable S2I builder is available</ANSWER>
+<ANSWER ISCORRECT="false">To speed up the build process</ANSWER>
+</QUESTION>
+
+</POLL>
