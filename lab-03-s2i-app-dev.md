@@ -64,11 +64,7 @@ Fill in the following values:
     Limit the amount of memory the container is allowed to use to `200 MB`.
     * **Labels:**  
     You can assign labels to Kubernetes resources to organize, group and select them. This is especially useful when working with many resources in the same project.  
-You can assign labels to Kubernetes resources to organize, group and select them. This is especially useful when working with many resources in the same project.
-    You can assign labels to Kubernetes resources to organize, group and select them. This is especially useful when working with many resources in the same project.  
-    OpenShift will add these labels to all the resources created by this template.  
 OpenShift will add these labels to all the resources created by this template.
-    OpenShift will add these labels to all the resources created by this template.  
     Add new labels to your application, for example the key `component` and value `frontend`. Please do not change or remove the `app` label:
     ![Specify Labels](lab-03-images/labels.png)
 
