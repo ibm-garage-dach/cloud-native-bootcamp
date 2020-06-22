@@ -1,4 +1,4 @@
-# Cloud Native Boootcamp Labs
+# Cloud Native Bootcamp Labs
 
 ## Red Hat OpenShift 4.3.x
 
