@@ -48,7 +48,7 @@ Fill in the following values:
 1. General
     * **Name:** `patient-ui`
 1. Advanced Options
-    * **Create a rout to the application:** [x] should be checked
+    * **Create a route to the application:** [x] should be checked
     ![Advanced options](lab-03-images/advanced-options.png)
     * **Build Configuration:**  
     Here you can specify when new builds should be launched.  
