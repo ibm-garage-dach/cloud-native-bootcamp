@@ -30,7 +30,7 @@ Have a look at the Dockerfile of the base image!
 
 Hint: There are two well known public container registries:
 
-- [Official redhat registry](https://catalog.redhat.com/software/containers/)
+- [Official redhat registry](https://catalog.redhat.com/software/containers/search)
 - [Docker Hub](https://hub.docker.com/)
 
 Be aware, that everybody can upload images to Docker Hub, so use them with caution! All the images from the redhat registry are certified and should be used whenever possible.
