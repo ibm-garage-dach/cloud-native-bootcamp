@@ -44,7 +44,7 @@ Fill in the following values:
 
 1. Git
     * **Git Repo URL:** `https://github.com/<Account Name>/node-s2i-openshift.git`
-    * **Context Dir:** `/site` (therefore expand Show Advanced Git Options)
+    * Under **Show Advanced Git Options** set **Context Dir:** `/site` (therefore expand Show Advanced Git Options)
 1. General
     * **Name:** `patient-ui`
 1. Advanced Options
