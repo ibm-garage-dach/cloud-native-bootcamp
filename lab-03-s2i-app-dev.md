@@ -16,7 +16,7 @@ Before you start please make sure you are should logged into the Web Console of 
 
 ## Create a git repository
 
-Browse to `https://github.com/IBM/node-s2i-openshift` and click `Fork`:
+Browse to [https://github.com/IBM/node-s2i-openshift](https://github.com/IBM/node-s2i-openshift) and click `Fork`:
 
 ![Repository](lab-03-images/fork-repository.png)
 
